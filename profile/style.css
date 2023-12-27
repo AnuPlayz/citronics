@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+.body-wrapper{
+  font-family: "Poppins", sans-serif;
+  background-size: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0; 
+  overflow: hidden;
+}
+
+/*sidebar*/
+.sidebar {
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 2px 10px 0px black;
+  transition: all 0.5s ease;
+}
+.sidebar header {
+  font-size: 28px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #1b1b1b;
+  user-select: none;
+  font-family: "Montserrat", sans-serif;
+}
+.sidebar a {
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 5px solid transparent;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.sidebar > a.active,
+.sidebar > a:hover {
+  border-left: 5px solid rgb(26, 173, 231);
+  color: rgb(26, 173, 231);
+}
+.sidebar a i {
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#check {
+  display: none;
+}
+label #btn,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #262626;
+  margin: 15px 30px;
+  font-size: 29px;
+  background: #262626;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all 0.5s ease;
+}
+label #cancel {
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+#check:checked ~ label #btn {
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel {
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-scroll {
+  position: fixed;
+  z-index: 80000;
+  animation: opacityo 2s linear infinite;
+  opacity: 1;
+  animation-delay: 3s;
+  animation-fill-mode: none;
+}
+
+@keyframes opacityo {
+  0%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 860px) {
+ .sidebar {
+    /* transform: rotate(-90deg); */
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100vw;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    /* margin: 100px 0; */
+  }
+  .sidebar a.active,
+  .sidebar a:hover {
+    border-left: none;
+    border-bottom: 5px solid rgb(26, 173, 231);
+    color: rgb(26, 173, 231);
+  }
+  .sidebar a {
+    border-right: 1px solid black;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 5px solid transparent;
+  }
+  header,
+  #btn,
+  #cancel {
+    display: none;
+  }
+  span {
+    position: absolute;
+    margin-left: 23px;
+    opacity: 1;
+    visibility: hidden;
+  }
+  .sidebar a {
+    height: 60px;
+  }
+  .sidebar a i {
+    margin-left: -10px;
+  }
+}
+
+.logout-button {
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(26, 173, 231);
+  color: rgba(26, 173, 231);
+  background-color: white;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+	z-index:50000;
+}
+
+.logout-button:hover {
+  color: white;
+  background: rgba(26, 173, 231);
+}
+
+.back {
+  position: fixed;
+  top: 1%;
+  right: 9%;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  margin-right: 2vw;
+	z-index:50000;
+}
+
+.back:hover {
+  color: rgba(26, 173, 231);
+}
+
+.profile {
+  animation: loadProfile 0.6s ease-in-out;
+  animation-fill-mode: both;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-height: 750px;
+  max-width: 900px;
+}
+
+.profile-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 15px 50px rgba(255, 255, 255, 0.1);
+  width: calc(100% - 75px);
+  height: calc(100% - 110px);
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+}
+
+.profile-image {
+  animation: loadProfileImage 1s ease-in-out 0.5s;
+  animation-fill-mode: both;
+  position: relative;
+  border-radius: 10px;
+  width: 45%;
+  flex: none;
+  background-image: url("http://40.media.tumblr.com/825bc0bba2584019a32dd3e3c924acc4/tumblr_npcpixeoob1txygfho1_500.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.profile-info {
+  margin-top: 120px;
+  padding: 8% 8% 2% 8%;
+  position: relative;
+}
+
+.profile-info h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0.7rem;
+  position: absolute;
+  color: #f0f1ea;
+  animation-fill-mode: both;
+}
+
+h1.first-name {
+  animation: titleEffect 1s cubic-bezier(0, 0.2, 0.4, 1);
+  top: -95px;
+  left: -85px;
+}
+
+.profile-info h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  margin-top: 0;
+  margin-bottom: 5%;
+}
+
+.profile-info h2 {
+  color: #0f0f0f;
+}
+
+.profile-info p {
+  line-height: 1.5rem;
+}
+
+.statistics {
+  margin-right: 10px;
+  margin-left: 80px;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.statistics .popup {
+  margin: 3%;
+  flex: auto;
+  color: #0f0f0f;
+}
+
+.btn {
+  padding: .1em 2em .1em;
+  border-radius: 3px;
+  margin: 8px 8px 8px 8px;
+  color: #fbdedb;
+  background-color: #fbdedb;
+  display: inline-block;
+  background: #e74c3c;
+  transition: 0.3s;
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: .85em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0em -0.3rem 0em rgba(0, 0, 0, 0.1) inset;
+  color: black;
+  background-color: #d2d2d2;
+  position: relative;
+}
+.btn:hover, .btn:focus {
+  opacity: 0.8;
+}
+.btn:active {
+  transform: scale(0.80);
+}
+
+.icon {
+  background: transparent no-repeat center;
+  background-size: contain;
+  background-origin: content-box;
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  border: none;
+  transition: transform 0.5s ease;
+}
+
+.icon:hover {
+  transform: scale(0.9);
+}
+
+.arrow {
+  flex: 0 1 75px;
+}
+
+.right {
+  transform: rotate(180deg);
+}
+
+.right:hover {
+  transform: scale(0.9) rotate(180deg);
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+@media only screen and (max-width: 890px) {
+  .back {
+    margin-right: 11vw;
+  }
+}
+
+@media only screen and (max-aspect-ratio: 4/7) and (max-width: 600px) {
+  .profile {
+    margin: 3%;
+    height: 97%;
+  }
+  .container {
+    height: 86%;
+    flex-direction: column;
+  }
+  .profile-image {
+    height: 40%;
+    width: calc(100% - 90px);
+  }
+  .profile-bg {
+    width: 100%;
+  }
+  h1.first-name {
+    left: 10px;
+    color: #0f0f0f;
+  }
+  .back {
+    position: absolute;
+    top: 8vh;
+    right: 2vw;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-aspect-ratio: 4/7) {
+  .profile {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+/* 
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+@keyframes loadProfile {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes loadProfileImage {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes titleEffect {
+  from {
+    opacity: 0;
+    transform: translateX(-75px);
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.popup:hover {
+  transform: scale(1.1);
+  color: rgba(26, 173, 231);
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: rgba(26, 173, 231);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(26, 173, 231) transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*particles-js*/
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+	z-index:-100000;
+}
