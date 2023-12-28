@@ -615,6 +615,29 @@ nav a:hover {
   animation: astronaut 2s ease-in-out infinite alternate;
 }
 
+#astronautt {
+  position: absolute;
+  right: 14vw;
+  width: 10rem;
+  height: auto;
+  top: 1vh;
+  margin: auto;
+  z-index: 3;
+  animation: astronaut 2s ease-in-out infinite alternate;
+}
+
+#ani {
+  position: absolute;
+  left: 0vw;
+  top: 55vh;
+  width: 10rem;
+  height: auto;
+  margin: auto;
+  z-index: 3;
+  animation: astronaut 2s ease-in-out infinite alternate;
+}
+
+
 @keyframes astronaut {
   from {
     transform: translateY(0%);
@@ -726,6 +749,15 @@ nav a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.timeline-header-mobb h1{
+  color: white;
+  display: flex;
+  font-family: "Bad-mofo", sans-serif;
+  font-size: 5rem;
+  letter-spacing: 3px;
+  justify-content: center;
 }
 
 .timeline-line {
@@ -991,6 +1023,8 @@ nav a:hover {
 .sponsor-header-mob {
   display: none;
 }
+
+
 .slide {
   background-position: cover;
   width: 100%;
