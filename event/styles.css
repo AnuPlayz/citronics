@@ -1,0 +1,755 @@
+  /* .flip-card-container */
+  .flip-card-container {
+    --hue: 150;
+    --primary: hsl(var(--hue), 50%, 50%);
+    --white-1: hsl(0, 0%, 90%);
+    --white-2: hsl(0, 0%, 80%);
+    --dark: hsl(var(--hue), 25%, 10%);
+    --grey: hsl(0, 0%, 50%);
+  
+    width: 310px;
+    height: 310px;
+    margin: 40px;
+  
+    perspective: 1000px;
+  }
+  
+  /* .flip-card */
+  .flip-card {
+    width: inherit;
+    height: inherit;
+  
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.6s 0.1s;
+  }
+  
+  /* hover and focus-within states */
+  .flip-card-container:hover .flip-card,
+  .flip-card-container:focus-within .flip-card {
+    transform: rotateY(180deg);
+  }
+  
+  /* .card-... */
+  .card-front,
+  .card-back {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+  
+    background: var(--dark);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  
+    backface-visibility: hidden;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* .card-front */
+  .card-front {
+    transform: rotateY(0deg);
+    z-index: 2;
+  }
+  
+  /* .card-back */
+  .card-back {
+    transform: rotateY(180deg);
+    z-index: 1;
+  }
+  
+  /* figure */
+  /* figure {
+    z-index: -1;
+  } */
+  
+  /* figure, .img-bg */
+  figure,
+  .img-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* img */
+  img {
+    height: 100%;
+    border-radius: 24px;
+  }
+  
+  @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+  /* figcaption */
+  figcaption {
+    display: block;
+    width: auto;
+    margin-top: 12%;
+    padding: 8px 22px;
+    font-weight: bold;
+    font-family: "Rubik Mono One", sans-serif;
+    font-size: 3rem;
+    /* letter-sp  acing: 2px; */
+    word-spacing: 6px;
+    text-align: center;
+    /* letter-spacing: 11px; */
+    transform: rotate(-90deg);
+    color: var(--white-1);
+  }
+  
+  /* .img-bg */
+  .img-bg {
+    background: hsla(var(--hue), 25%, 10%, 0.5);
+  }
+  
+  .card-front .img-bg {
+    clip-path: polygon(0 20%, 100% 40%, 100% 100%, 0 100%);
+  }
+  
+  .card-front .img-bg::before {
+    content: "";
+  
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(18deg);
+  
+    width: 100%;
+    height: 6px;
+    border: 1px solid var(--primary);
+    border-left-color: transparent;
+    border-right-color: transparent;
+  
+    transition: 0.1s;
+  }
+  
+  .card-back .img-bg {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
+  }
+  
+  /* hover state */
+  .flip-card-container:hover .card-front .img-bg::before {
+    width: 6px;
+    border-left-color: var(--primary);
+    border-right-color: var(--primary);
+  }
+  
+  
+  .ul-button {
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+  
+    list-style: none;
+    color: var(--white-1);
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* li */
+  .li-front {
+    width: 100%;
+    margin-top: 12px;
+    padding: 5px;
+  
+    font-size: 14px;
+    text-align: center;
+  
+    position: relative;
+  }
+  .li-back {
+    width: 100%;
+  list-style: none;
+    font-size: 14px;
+    text-align: center;
+  
+    position: relative;
+  }
+  
+  li:nth-child(2n) {
+    color: var(--white-2);
+  }
+  
+  li:not(:last-child)::after {
+    content: "";
+  
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 1px;
+  
+    background: currentColor;
+    opacity: 0.2;
+  }
+  
+  /* button */
+  button {
+    width: 90%;
+    margin-top: 21px;
+    font-family: inherit;
+    font-weight: bold;
+    color: var(--white-1);
+    letter-spacing: 2px;
+    padding: 5px 20px;
+    border: 1px solid var(--grey);
+    border-radius: 42px;
+    background: transparent;
+    transition: 0.3s;
+  }
+  
+  button:hover,
+  button:focus {
+    color: var(--primary);
+    background: hsla(var(--hue), 25%, 10%, 0.2);
+    border-color: currentColor;
+  }
+  
+  button:active {
+    transform: translate(2px);
+  }
+  
+  /* .design-container */
+  .design-container {
+    --tr: 90;
+    --op: 0.5;
+  
+    width: 100%;
+    height: 100%;
+  
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    pointer-events: none;
+  }
+  
+  /* .design */
+  .design {
+    display: block;
+  
+    background: var(--grey);
+    position: absolute;
+  
+    opacity: var(--op);
+    transition: 0.3s;
+  }
+  
+  .design--1,
+  .design--2,
+  .design--3,
+  .design--4 {
+    width: 1px;
+    height: 100%;
+  }
+  
+  .design--1,
+  .design--2 {
+    top: 0;
+    transform: translateY(calc((var(--tr) - (var(--tr) * 2)) * 1%));
+  }
+  
+  .design--1 {
+    left: 20%;
+  }
+  
+  .design--2 {
+    left: 80%;
+  }
+  
+  .design--3,
+  .design--4 {
+    bottom: 0;
+    transform: translateY(calc((var(--tr) + (var(--tr) - var(--tr))) * 1%));
+  }
+  
+  .design--3 {
+    left: 24%;
+  }
+  
+  .design--4 {
+    left: 76%;
+  }
+  
+  .design--5,
+  .design--6,
+  .design--7,
+  .design--8 {
+    width: 100%;
+    height: 1px;
+  }
+  
+  .design--5,
+  .design--6 {
+    left: 0;
+    transform: translateX(calc((var(--tr) - (var(--tr) * 2)) * 1%));
+  }
+  
+  .design--5 {
+    top: 41%;
+  }
+  
+  .design--6 {
+    top: 59%;
+  }
+  
+  .design--7,
+  .design--8 {
+    right: 0;
+    transform: translateX(calc((var(--tr) + (var(--tr) - var(--tr))) * 1%));
+  }
+  
+  .design--7 {
+    top: 44%;
+  }
+  
+  .design--8 {
+    top: 56%;
+  }
+  
+  /* states */
+  button:hover + .design-container,
+  button:active + .design-container,
+  button:focus + .design-container {
+    --tr: 20;
+    --op: 0.7;
+  }
+  
+  .abs-site-link {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 16px;
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  .Entertainment {
+    position: absolute;
+    top: 174px;
+    left: -152px;
+  }
+  
+  .mech{
+    position: absolute;
+      top: 174px;
+      left: -135px;
+  }
+  
+  .Management {
+    position: absolute;
+    top: 174px;
+    left: -147px;
+  }
+  
+  .roadies{
+    position: absolute;
+    top: 174px;
+    left: -207px;
+  }
+  
+  .Civil {
+    position: absolute;
+    top: 174px;
+    left: -41px;
+  }
+  .quiz {
+    position: absolute;
+    top: 174px;
+    left: -141px;
+  }
+  
+  .Robotics {
+    position: absolute;
+    left: -95px;
+    top: 169px;
+  }
+  
+  .Enterprenuership {
+    position: absolute;
+    left: -197px;
+    top: 169px;
+  }
+  
+  .Pharma {
+    position: absolute;
+    left: -110px;
+    top: 169px;
+  }
+  
+  .Software {
+    position: absolute;
+    left: -95px;
+    top: 169px;
+  }
+  
+  .On-the-Spot {
+    position: absolute;
+    left: -161px;
+    top: 169px;
+  }
+  
+  .Sports {
+    position: absolute;
+    left: -75px;
+    top: 169px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: Tahoma, Arial, sans-serif;
+    margin-bottom: 80px;
+    font-weight: bolder;
+  }
+  
+  .box {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+  .button {
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid #06d85f;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+  .button:hover {
+    background: #06d85f;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    max-height: 80%;
+    overflow-y: auto;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06d85f;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .box {
+      width: 70%;
+    }
+    .popup {
+      width: 70%;
+    }
+  }
+  
+  .open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+  
+  /* The popup form - hidden by default */
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type="text"],
+  .form-container input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type="text"]:focus,
+  .form-container input[type="password"]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #04aa6d;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover,
+  .open-button:hover {
+    opacity: 1;
+  }
+  
+  
+  
+  
+  .photo{
+    position: absolute;
+    top: 172px;
+    left: -142px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .text-container h1{
+    margin: 0;
+    font-size: 7rem;
+    color: rgba(225,225,225, .01);
+    background-image: url("https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: repeat;
+    -webkit-background-clip:text;
+    animation: animate 10s ease-in-out infinite;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-bottom: 3%;
+    position: absolute;
+    top: -101vh;
+    left: 11vw;
+   
+  }
+  
+  .text-container {
+    width: 100%;
+    transform: rotate(-90deg);
+    position: sticky;
+    top: 0px;
+  }
+  
+  
+  
+  @keyframes animate {
+    0%, 100% {
+      background-position: left top;
+    }
+    25%{
+      background-position: right bottom;
+     }
+    50% {
+      background-position: left bottom;
+    }
+    75% {
+      background-position: right top;
+    }   
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .card-bg{
+    background: linear-gradient(rgba(0, 0, 0, 0.8),
+    rgba(0,0,0,0.6));
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #innercontainer_arrow{
+    margin-top: -9%;
+  }
+  
+  .guilines_heading{
+    text-align: center;
+    padding: 5%;
+  }
+  
+  .fix-guidlines{
+    margin-top: -2%;
+  }
+  
+  
+  .description, .registration-fee, .price_money, .head{
+    text-align: center;
+    padding-top: 3%;
+  }
+  
+  .registration-fee{
+    color: #c10000;
+  }
+  
+  #description{
+    font-size: 22px;
+  }
+  
+  .head{
+  
+  }
+  
+  #cross{
+    cursor: pointer;
+    position: relative;
+    top: 0%;
+  }
+  
+  #cross:hover{
+    transform: scale(1.5);
+    transition: .5s;
+  }
+  
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  .event-title{
+    font-weight: bolder;
+    font-size: 40px;
+  }
+  
+  .coordinator{
+    text-align: center;
+  }
+  
+  .price{
+    font-size: 25px;
+    font-weight: 600;
+  }
+  
+  
+  .go-to-home{
+      top: 0px;
+      position: fixed;
+      left: 2vw;
+      z-index: 100;
+  }
+  
+  .upper-arrow{
+    position: fixed;
+    bottom: 5vh;
+    right: 10vh;
+  }
+  
+  .content-upper-arrow::after{
+    content: "⮝";
+    font-size: 25px;
+    color: white;
+  }
+  
+  .upper-arrow:hover{
+    transition: 1s;
+    transform: rotate(360deg);
+  }
+  
+  @media (max-width: 500px){
+    .upper-arrow{
+      position: fixed;
+      bottom: 5vh;
+      right: 5vh;
+      z-index: 2;
+    }
+  
+    #dynamicfetch{
+      padding: 10px !important;
+    }
+  }

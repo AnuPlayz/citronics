@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -64,6 +65,16 @@ body {
   /* overflow: scroll; */
   /* overflow-x: hidden; */
   /* scroll-snap-type: y mandatory; */
+}
+
+
+.panell {
+  position: relative;
+  overflow: hidden;
+  /* scroll-snap-align: start; */
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  cursor: default;
 }
 
 .panel {
@@ -738,7 +749,6 @@ nav a:hover {
   grid-gap: 2rem;
   margin-bottom: 5rem;
 }
-
 .card-mob {
   display: none;
 }
