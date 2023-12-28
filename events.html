@@ -37,6 +37,9 @@
     <title>Citronics-2024</title>
 </head>
 <body>
+  <div class="loader-bg">
+    <div class="loader"><img src="./assets/preloader.webp" alt="Preloader"></div>
+  </div>
     <div class="well" id="well">
       <a href="#top" title="Back to top"><button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button></a>
   
@@ -274,6 +277,14 @@
     
     <script src="./particles.js"></script>
     <script src="./app.js"></script>
+    <script>
+        window.onload = function () {
+          var preloader = document.querySelector(".loader-bg");
+          setTimeout(function () {
+            preloader.style.display = "none";
+          }, 2000);
+        };
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
