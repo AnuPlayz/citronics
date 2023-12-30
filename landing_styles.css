@@ -755,8 +755,8 @@ nav a:hover {
   color: white;
   display: flex;
   font-family: "Bad-mofo", sans-serif;
-  font-size: 5rem;
-  letter-spacing: 3px;
+  font-size: 4rem;
+  letter-spacing: 2px;
   justify-content: center;
 }
 
