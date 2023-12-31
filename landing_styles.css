@@ -1336,7 +1336,7 @@ footer {
 
   .card-mob .second {
     padding-left: 30px;
-    padding-right: 30px;
+    padding-right: 15px;
   }
 
   .heading button {
@@ -1788,7 +1788,7 @@ a {
 
   .card-mob .second {
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 10px;
   }
   .card-mob {
     margin: 6vw;
@@ -1807,7 +1807,7 @@ a {
   }
   .card-mob .second {
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 7px;
   }
 
   .second {
