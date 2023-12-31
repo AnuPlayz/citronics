@@ -1709,14 +1709,14 @@ Combo Offer
         c_price: null,
       },
       guidelines: [
-        `1.The last participant with a seat wins.
-        2. Ten chairs will be places in a circle facing outward.
+        `1. The last participant with a seat wins.
+        2. Ten chairs will be placed in a circle facing outward.
         3. The participants will walk in a circle as the music plays.
-        3. As soon as the music stops, all participants must find a place to sit.
-        4. The participant who cannot find a seat will be removed from the circle.
-        5. For each subsequent round, the music will resume after one chair has been remo removed.
-          If there will Or somehow event will cancel then there is no refund
-          lf any participants pushes other participants, the will be out of the game
+        4. As soon as the music stops, all participants must find a place to sit.
+        5. The participant who cannot find a seat will be removed from the circle.
+        6. For each subsequent round, the music will resume after one chair has been removed.
+        7. If the event is canceled, there is no refund.
+        8. If any participant pushes others, they will be out of the game.
     `
       ],
       updatedondate: {
