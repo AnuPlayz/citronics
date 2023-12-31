@@ -617,7 +617,7 @@ nav a:hover {
 
 #astronautt {
   position: absolute;
-  right: 16vw;
+  right: 1vw;
   width: 10rem;
   height: auto;
   top: 1vh;
@@ -1428,13 +1428,12 @@ footer {
     display: none;
   }
   .card-mob {
-    display: block;
-    position: relative;
+    display: grid;
     margin: auto;
     height: 100%;
     width: 400px;
   }
-  
+
   .card-mob .second {
     position: absolute;
     border-radius: 2rem;
