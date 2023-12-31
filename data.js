@@ -282,7 +282,7 @@ entertainment: {
         2.  Participants has to specify the software they are going to use for designing during the registration.,
         3.  Decision taken by judges will be final and will not be change in any circumstances.,
         4.  The system and software for design will be provided to you and also eligible your own laptop.,
-        5.  Max. team members are 2 and min. is 1.
+        5.  Max. team members are 2 and min. is .
         " Winner Prize is Subjected To Number Of Entry"
         `,
       ],
