@@ -617,7 +617,7 @@ nav a:hover {
 
 #astronautt {
   position: absolute;
-  right: 14vw;
+  right: 12vw;
   width: 10rem;
   height: auto;
   top: 1vh;
@@ -629,7 +629,7 @@ nav a:hover {
 #ani {
   position: absolute;
   left: 0vw;
-  top: 40vh;
+  top: 60vh;
   width: 10rem;
   height: auto;
   margin: auto;
@@ -822,6 +822,12 @@ nav a:hover {
 .second {
   width: 85%;
   height: 450px;
+  transition: transform 0.8s ease-in;
+}
+
+.onspot {
+  width: 85%;
+  height: 550px !important;
   transition: transform 0.8s ease-in;
 }
 
@@ -1336,7 +1342,6 @@ footer {
 
   .card-mob .second {
     padding-left: 30px;
-    padding-right: 15px;
   }
 
   .heading button {
@@ -1788,7 +1793,6 @@ a {
 
   .card-mob .second {
     padding-left: 20px;
-    padding-right: 10px;
   }
   .card-mob {
     margin: 6vw;
@@ -1807,7 +1811,6 @@ a {
   }
   .card-mob .second {
     padding-left: 15px;
-    padding-right: 7px;
   }
 
   .second {
