@@ -722,9 +722,6 @@ nav a:hover {
   margin: 10% 10%;
 }
 
-.clickable {
-  z-index: 69;
-}
 /* timeline */
 .timeline {
   height: 100%;
