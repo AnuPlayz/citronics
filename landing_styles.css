@@ -896,7 +896,7 @@ nav a:hover {
   text-align: left;
   opacity: 0;
   transition: 1s ease;
-  background: rgb(26, 173, 231, 0.75);
+  background: #191818;
   font-size: 1rem;
   border: white solid 6px;
   padding: 1rem;
