@@ -1788,6 +1788,7 @@ a {
 
   .card-mob .second {
     padding-left: 20px;
+    padding-right: 20px;
   }
   .card-mob {
     margin: 6vw;
@@ -1806,6 +1807,7 @@ a {
   }
   .card-mob .second {
     padding-left: 15px;
+    padding-right: 15px;
   }
 
   .second {
