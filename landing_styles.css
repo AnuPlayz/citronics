@@ -617,7 +617,7 @@ nav a:hover {
 
 #astronautt {
   position: absolute;
-  right: 12vw;
+  right: 16vw;
   width: 10rem;
   height: auto;
   top: 1vh;
@@ -629,7 +629,7 @@ nav a:hover {
 #ani {
   position: absolute;
   left: 0vw;
-  top: 60vh;
+  top: 50vh;
   width: 10rem;
   height: auto;
   margin: auto;
