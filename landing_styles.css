@@ -821,7 +821,7 @@ nav a:hover {
 .first,
 .second {
   width: 85%;
-  height: 400px;
+  height: 450px;
   transition: transform 0.8s ease-in;
 }
 
@@ -1336,6 +1336,7 @@ footer {
 
   .card-mob .second {
     padding-left: 30px;
+    padding-right: 10px;
   }
 
   .heading button {
@@ -1761,7 +1762,7 @@ a {
   }
 
   .card-mob a {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 
   .card-mob {
