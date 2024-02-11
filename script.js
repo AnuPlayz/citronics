@@ -15,7 +15,7 @@ window.onload = function () {
     hour = minute * 60,
     day = hour * 24;
 
-  let festDay = "March 27, 2024 11:00:00",
+  let festDay = "February 29, 2024 00:00:00",
     countDown = new Date(festDay).getTime(),
     x = setInterval(function () {
       let now = new Date().getTime(),

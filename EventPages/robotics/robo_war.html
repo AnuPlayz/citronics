@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/icon.png" type="image/x-icon">
+  <meta name="description" content="Citronics Fest 2024 is here! Come with us and experience our journey to the cosmos">
+  <meta property="og:title" content="Citronics'24" />
+  <meta property="og:description" content="Citronics Fest 2024 is here! Come with us and experience our journey to the cosmos" />
+  <meta property="og:url" content="https://idksomename.netlify.app/" />
+  <meta property="og:site_name" content="Citronics Fest" />
+  <!--tittle-->
+  <title>Beat the Street</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body id="1">
+    <div class="fullscreen-bg">
+    <video loop muted autoplay class="fullscreen-bg__video">
+        <source src="/assets/assets_blue-planets.webm" type="video/webm">
+    </video>
+</div>
+  <div class="nav-scroll" id="nav-scroll">
+    <input type="checkbox" id="check" />
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+   <div class="sidebar">
+                    <header>Explore</header>
+                    <a title="Homepage" href="../../">
+                        <i class="fas fa-rocket"></i>
+                        <span>Homepage</span>
+                    </a>
+                    <a title="Homepage" href="/events.html">
+                      <i class="fas fa-book"></i>
+                      <span>Events</span>
+                    </a>
+                    <a title="FAQ" href="../../faqpage/">
+
+                        <i class="fas fa-question"></i>
+                        <span>FAQ's</span>
+                    </a>
+                </div>
+</div>
+      <a href="/events.html"><i class="fas fa-arrow-circle-left back fa-2x"></i></a>
+
+<section>
+  <div class="img">
+    <img src="https://i.ibb.co/xKk0C4J/space-warrior.png" alt="" class="spaceball"> 
+  </div>
+  <div class="profile-card typewriter-effect">
+    <header>
+      <a href="#">
+        <!--add any image according to the event here from pinterest or any app just copy address of the image and paste-->
+        <img
+          src="https://i.pinimg.com/564x/c5/ae/11/c5ae119368feeed606f2624f3eb41660.jpg"
+          class="hoverZoomLink">
+      </a>
+        <!--tittle-->
+      <h1 class="event_name">Beat the Street</h1>
+      <!-- add any small line according to the event name-->
+      <h2 class="text" id="typewriter-text">
+        " A open talent event for all. "
+      </h2>
+    </header>
+    <div class="profile-bio">
+      <p>
+        <a href="#popup1">
+         <p class="heads"><i class="fas fa-info-circle"></i> About</p>
+        </a>
+        <a href="#popup2">
+          <p class="heads"><i class="fas fa-exclamation"></i> Rules</p>
+        </a>
+        <a href="#popup3">
+          <p class="heads"><i class="fas fa-sign-in-alt"></i> Register</p>
+        </a>
+      </p>
+    </div>
+  </div>
+  <h4>What's in for this Event!</h4>
+  <div class="msg">
+  <div class="envelope-area" onclick="envelope.openEnvelope();"></div>
+    <div class="envelope-back"></div>
+    <div class="envelope-message">
+      <p class="small-quote">Event Message</p>
+    </div>
+    <div class="envelope-message-area" onclick="envelope.showMessage();"></div>
+    <div class="envelope-opening"></div>
+    <div class="envelope-front"></div>
+    <div class="envelope-shadow"></div>
+    <div class="display-message">
+      <a class="close-message" href="#" onclick="envelope.closeMessage();"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+      <div class="quote-information">
+        <!--updatedondate--> <!--same , make sure to add <br> in all of the updateondate-->
+        <h1 class="quote">
+          1. Minimum 50 entries are must otherwise the event will be cancelled.<br>
+          2. The amount paid is non-refundable.<br>
+          3. If the event is cancelled, then that amount can be used to register in another event.<br>
+          </h1>
+        <p class="author">&mdash;&nbsp;Citronics'24</p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="popup1" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <h2>
+        <i class="fas fa-info-circle" id="cancel"></i>
+        Description
+      </h2>
+      <div class="content">
+        <!--description-->
+        <p>Beat the Street is an open talent event where you can showcase your Singing, Rapping & BeatBoxing Talent.</p><br>
+        <h2>
+          <i class="fas fa-award" id="cancel"></i> Prizes
+        </h2>
+        <div class="content">
+          <!--firstprice-->
+          <p>1st - ₹3,000/-<br>2nd - ₹2,000/-</p><br>
+          <h2>
+            <i class="fas fa-rupee-sign" id="cancel"></i> Fee
+          </h2>
+          <div class="content">
+            <!--registrationfee-->
+            <p> ₹200</p><br>
+          </div>
+          <h2>
+            <i class="fas fa-user-circle" id="cancel"></i> Head
+          </h2>
+          <div class="content">
+            <!--cordinator-->
+            <p>Null</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="popup2" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <h2>
+        <i class="fas fa-exclamation-circle" id="cancel"></i>Rules
+      </h2>
+      <div class="content">
+        <p>
+          1. Each performer will get 3 to 5 minutes. So, prepare accordingly.<br>
+          2. All participants of the entries should be atleast 13 years old and above.<br>
+          3. All the participants have to Register on website with registration fees.<br>
+          4. We will provide you with - Sound board, Speakers, Mics, and Cable.<br>
+          5. When you are next, be ready.<br>
+          6. Please be quiet and show respect for all other performers. Applaud for everyone.<br>
+          7. Be respectful to the venue and equipment.<br>
+          8. Please stay after your performance till the results get declared.<br>
+          9. Your content should be free from any kind of sexual and religious vulgarity.<br>
+          10. The official entries shall be provided by the organizers with a schedule of activities.<br>
+          11. Those who are absent/late for their designated blocking time will not be allowed to block on stage at a later time.<br>
+          12. A panel of judges shall determine the winners based on the foregoing criteria.<br>
+          13. Any violation of the foregoing rules may cause 3 points deduction per violation on the final score. The decision of the panel shall be final and irrevocable.<br>
+        </p><br>
+        <h2>
+          <i class="fas fa-gavel" id="cancel"></i>Eligiblity Criteria
+        </h2>
+        <div class="content">
+          <p>
+          <ol>
+            <li>
+              Participant must be 18+.
+            </li>
+            <li>
+              There is no refunding policy.
+            </li>
+            <br>
+          </ol>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="popup3" class="overlay">
+    <div class="popup">
+      <a class="close" href="#">&times;</a>
+      <h2>
+        <i class="fas fa-user-circle" id="cancel"></i>Register
+      </h2>
+     <div class="buttons"> 
+          <button class="eventregn">Register</button>
+        </div> 
+      </div>
+    </div>
+
+  </section>
+
+  <script src="../index.js"></script>
+  <script src="../script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+</body>
+
+</html>

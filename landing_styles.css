@@ -378,21 +378,20 @@ video {
 /* countdown timer */
 #countdown {
   position: absolute;
-  top: 50vh;
-  left: 0vw;
-  font-weight: 600;
+  top: 62vh;
+  left: 24vw;
+  font-weight: 400;
 }
 
 #countdown li {
   display: inline-block;
   color: rgb(26, 173, 231);
-  font-size: 1.5rem;
+  font-size: 1rem;
   list-style-type: none;
   padding: 1em;
   text-transform: uppercase;
-  background-color: rgba(43, 43, 43, 0.8);
-  border-radius: 8px;
-  box-shadow: 0px 8px 0px 0px #16151d;
+  border-radius: 4px;
+  box-shadow: 0px 4px 0px 0px #16151d;
   overflow: hidden;
   text-align: center;
   margin: 0.2em;
@@ -400,7 +399,7 @@ video {
 
 #countdown li div {
   display: block;
-  font-size: 3.5rem;
+  font-size: 3rem;
   z-index: 3000;
 }
 
@@ -758,7 +757,7 @@ nav a:hover {
 .about-box h1 {
   color: white;
   font-family: "Bad-mofo";
-  font-size: 4.2rem;
+  font-size: 4rem;
   position: absolute;
   top: 5vh;
   margin-bottom: 2rem;
@@ -766,7 +765,7 @@ nav a:hover {
 
 .about-text {
   color: white;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   margin: 10% 10%;
 }
 
@@ -873,6 +872,11 @@ nav a:hover {
   width: 85%;
   height: 450px;
   transition: transform 0.8s ease-in;
+}
+
+.hihi {
+  max-width: 100%;
+  height: auto;
 }
 
 .onspot {
@@ -1398,14 +1402,14 @@ footer {
   }
 
   #countdown li {
-    font-size: 1.2rem;
+    font-size: 0.7rem;
   }
 
   #countdown li span {
     display: inline-block;
     z-index: 2000;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .first {
